@@ -18,6 +18,7 @@
 * Needed (python3.8+)
 * Needed apache2 or nignx (SETUP IS FOR APACHE2)
 * create a list directory in /var/www/ (EXAMPLE) mkdir /var/www/list | cd /var/www/list
+* move the counter folder in /var/www/ mv /var/www/html/counter /var/www/
 * create txt files in the list directory, names (crunchy, hulu, minecraft, nordvpn, riot, wish, uplay) (EXAMPLE) touch /var/www/list/hulu.txt 
 * use cloudflare protection to prevent email scraping
 ```
