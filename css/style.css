@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #122436;
+  height: 100vh;
+}
+.shadow {
+  filter: drop-shadow(10px 10px 200px #f0f) drop-shadow(-10px -10px 50px #f0f);
+}
+.triangle-wrapper {
+  width: 30vw;
+  height: calc(30vw / (1/ 1));
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: #f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.triangle {
+  width: calc(30vw - 30px);
+  height: calc(30vw - 30px);
+  background-color: #122436;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  margin-top: 10px;
+  filter: blur(115px) drop-shadow(-10px -10px 75px #f0f);
+}
+.triangle p {
+  color: #fff;
+}

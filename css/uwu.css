@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+body{
+    cursor:none;
+    
+    background-color: #111;
+    text-align:center;
+    box-sizing:border-box;
+    font-family:"Lato",Sans-serif;
+  /*   position:relative; */
+  }
+  p.Thicker { 
+    width: small;
+    color: white;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h1.gen {
+    text-transform:uppercase;
+    width: fit-content;
+    font-size: huge;
+    color: white;
+    
+    font-family: Quicksand;
+  }
+  p.thicker {
+    color: black;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 900;
+  }
+  
+  p.bold {
+    color: black;
+    font-family: Impact, fantasy;
+    font-weight: 900;
+  }
+  h1.title {
+    color: black;
+    font-family: Impact, fantasy;
+    font-weight: 900;
+  }
+  
+  .box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform : translate(-50% ,-50%);
+  }
+  
+  .btn:link,
+  .btn:visited{
+    color:white;
+    font-weight: 900;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    text-transform:uppercase;
+    position:relative;
+    top:0;
+    left:0;
+    padding:20px 40px;
+    border-radius:100px;
+    display:inline-block;
+    transition: all .5s;
+  }
+  
+  .btn-white{
+    background:rgba(0,0,0,0.1);
+    color:#000;
+  }
+  
+  .btn:hover{
+     box-shadow:0px 10px 10px rgba(0,0,0,0.2);
+     transform : translateY(-3px);
+  }
+  
+  .btn:active{
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2)
+    transform:translateY(-1px);
+  }
+  
+  .btn-bottom-animation-1{
+    animation:comeFromBottom 1s ease-out .8s;
+  }
+  
+  .btn::after{
+    content:"";
+    text-decoration: none;
+    text-transform:lowercase;
+    font-weight: 900;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border-radius:100px;
+    display:inline-block;
+    z-index:-1;
+    transition: all .5s;
+  }
+  
+  .btn-white::after {
+      background:#111;
+  }
+  
+  .btn-animation-1:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+  }
+  
+  @keyframes comeFromBottom{
+    0%{
+      opacity:0;
+      transform:translateY(40px);
+    } 
+    100%{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+  
+h1.p {
+  border-right: solid 2px rgba(255, 111, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden; 
+  width: fit-content;
+  font-size: huge;
+  font-family: Quicksand;
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+h1.p {
+  animation: animated-text 2s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 150px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255, 153, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+
+.rainbow-text {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to left, violet, indigo, blue, violet, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
